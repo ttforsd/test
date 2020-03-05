@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <table class='table table-dark'>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+        </tr>
+    {% for reg in regs %} 
+        <tr>
+            <td>{{ reg['id'] }}</td>
+            <td>{{ reg['name'] }}</td>
+            <td>{{ reg['age'] }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock %}
